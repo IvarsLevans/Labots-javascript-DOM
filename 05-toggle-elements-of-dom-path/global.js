@@ -2,21 +2,18 @@
 
 window.addEventListener("load", function(){
 
-  var button = document.getElementById('toggle_button');
-
+  const button = document.getElementById('toggle_button');
   button.addEventListener("click", function() {
 
-    var movieList = document.querySelectorAll("ul.second_five li");
+    const movList = document.querySelectorAll("ul.second_five li");
+    movList.forEach(element => {
 
-    for (var i = 0; i < movieList.length; i++) {
-      if (movieList[i].style.display === "list-item") {
-        movieList[i].style.display = "none";
+      if(element.style.display == "none"){
+          element.style.display = "list-item";
       }
-      else {
-        movieList[i].style.display = "list-item";
+      else{
+          element.style.display = "none";
       }
-    }
-
-  });
-
-});
+    });
+  })
+})

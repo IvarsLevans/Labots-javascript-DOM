@@ -1,14 +1,12 @@
   window.addEventListener("load", function(){
 
-  var button = document.getElementById('button');
-
+  const button = document.getElementById('button');
   button.addEventListener("click", function() {
 
-    var divs_to_show = document.getElementsByClassName('show_me');
+    const hElements = document.getElementsByClassName('show_me');
+    Array.from(hElements).forEach(element => {
 
-    for (var i = 0; i < divs_to_show.length; i++) {
-      divs_to_show[i].style.display = "block";
-    }
-  });
-
+      element.style.display = "block";
+    });
+  })
 });

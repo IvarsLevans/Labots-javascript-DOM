@@ -2,13 +2,11 @@
 
 window.addEventListener("load", function(){
 
-    var name_field = document.getElementById("full_name");
+    const nametxtbox = document.getElementById("full_name");
+    nametxtbox.addEventListener("keyup", function() {
   
-    name_field.addEventListener("keyup", function() {
-  
-      var greeting_div = document.getElementById("greeting");
-  
-      greeting_div.innerHTML = ("Hello there, " + name_field.value + "!");
+      const greeting = document.getElementById("greeting");
+      greeting.innerHTML = ("Hey, " + nametxtbox.value + "!");
   
     });
   

@@ -1,14 +1,11 @@
 window.addEventListener("load", function(){
 
-  var button = document.getElementById('button');
+  const hButton = document.getElementById('button');
+  hButton.addEventListener("click", function() {
 
-  button.addEventListener("click", function() {
-
-    var divs_to_hide = document.getElementsByClassName('hide_me');
-
-    for (var i = 0; i < divs_to_hide.length; i++) {
-      divs_to_hide[i].style.display = "none";
-    }
-  });
-
+      const hElements = document.getElementsByClassName('hide_me');
+      Array.from(hElements).forEach(element => {
+            element.style.display = "none";
+      });
+  })
 });
